@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row">
+    <h1 class="text-center">Add new House Base</h1>
+    <div class="col-6 offset-3">
+        <form action="/housebase" method="POST" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" name="housebase[title]" placeholder="Title" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" name="housebase[location]" placeholder="location" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Image</label>
+                <input class="form-control" type="text" name="housebase[image]" placeholder="Image URL" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="Price">Price</label>
+            <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" id="price" aria-label="price" name="housebase[price]" required>
+                <span class="input-group-text">.00</span>
+              </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" name="housebase[description]" placeholder="Description" required></textarea>
+            </div>
+            <div class="mb-3">
+            <button class="btn btn-dark">Add new House Base</button>
+            </div>
+        </form>
+    </div>
+</div>

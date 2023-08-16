@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">Add new House Base</h1>
+        <div class="col-6 offset-3">
+            <form action="/housebase/<%= housebase._id %>?_method=put" method="POST" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" name="housebase[title]" placeholder="Title" value="<%= housebase.title %>" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" name="housebase[location]" placeholder="location" value="<%= housebase.location %>" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image</label>
+                    <input class="form-control" type="text" name="housebase[image]" placeholder="Image URL" value="<%= housebase.image %>" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="Price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" id="price" aria-label="price" name="housebase[price]" value="<%= housebase.price %>" required>
+                    <span class="input-group-text">.00</span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" name="housebase[description]" placeholder="Description" required><%= housebase.description %></textarea>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
